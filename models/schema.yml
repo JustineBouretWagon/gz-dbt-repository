@@ -19,13 +19,13 @@ sources :
               description : purchase price of each product.
       - name : sales 
         identifier: raw_gz_sales
-        description: sales of greenweez / we have one 'raw' per products_id found in each orders_id.
+        description: sales of greenweez / we have one 'raw' per pdt_id found in each orders_id.
         columns :
               - name : date_date
                 description : date of the sale.
               - name : orders_id
                 description : id of the order.
-              - name : products_id
+              - name : pdt_id
                 description : id of the product.
               - name : revenue
                 description : revenue of the product.
