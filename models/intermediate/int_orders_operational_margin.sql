@@ -1,6 +1,6 @@
 WITH join_t AS (SELECT margin.orders_id
 ,margin.date_date
-,(margin.margin + CAST(ship_t.shipping_fee AS FLOAT64) - CAST(ship_t.logcost AS FLOAT64) - CAST(ship_t.ship_cost AS FLOAT64)) AS operational_margin
+,(margin.margin + ship_t.shipping_fee - ship_t.logcost  - ship_t.ship_cost ) AS operational_margin
 FROM {{ ref("int_sales_margin")}} AS margin
 INNER JOIN {{ref("stg_raw__ship")}} AS ship_t
 USING(orders_id))
