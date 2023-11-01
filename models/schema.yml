@@ -5,6 +5,15 @@ sources:
     schema: gz_raw_data
     description: greenweez raw data source.
     tables:
+      - name: int_campaigns.sql
+        identifier : int_campaigns.sql
+        description: KPI of campaigns of all channel regroupped.
+       
+      - name: int_campaigns_day.sql
+        identifier : int_campaigns_day.sql
+        description: aggregated version of int_campaigns model for each day.
+        
+
       - name: adwords
         identifier : raw_gz_adwords
         description: cost, impressions and click per campaign and per day for adwords campaign.
