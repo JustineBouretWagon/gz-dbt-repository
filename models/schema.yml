@@ -7,24 +7,132 @@ sources:
     tables:
       - name: adwords
         identifier : raw_gz_adwords
+        description: cost, impressions and click per campaign and per day for adwords campaign.
         tests:
           - unique:
               column_name: "(date_date ||'-'||campaign_key)"
+        columns: 
+          - name : date_date
+            description : date of the campaign.
+            tests :
+              - not_null
+          - name : paid_source
+            description : channel of campaign.
+            tests :
+              - not_null
+          - name : campaign_key
+            description : id of campaign.
+            tests :
+              - not_null
+          - name : campaign_name
+            description : campaign name.
+            tests :
+              - not_null
+          - name : ads_cost
+            description : ads cost.
+            tests :
+              - not_null
+          - name : impression
+            description : number of impression par date and campaign.
+          - name : click
+            description : number of click par date and campaign.
+            
       - name : bing
         identifier : raw_gz_bing
+        description: cost, impressions and click per campaign and per day for bing campaign.
         tests:
           - unique:
               column_name: "(date_date ||'-'||campaign_key)"
+        columns: 
+          - name : date_date
+            description : date of the campaign.
+            tests :
+              - not_null
+          - name : paid_source
+            description : channel of campaign.
+            tests :
+              - not_null
+          - name : campaign_key
+            description : id of campaign.
+            tests :
+              - not_null
+          - name : campaign_name
+            description : campaign name.
+            tests :
+              - not_null
+          - name : ads_cost
+            description : ads cost.
+            tests :
+              - not_null
+          - name : impression
+            description : number of impression par date and campaign.
+          - name : click
+            description : number of click par date and campaign.
+            
       - name : criteo
         identifier : raw_gz_criteo
+        description: cost, impressions and click per campaign and per day for criteo campaign.
         tests:
           - unique:
               column_name: "(date_date ||'-'||campaign_key)"
+        columns: 
+          - name : date_date
+            description : date of the campaign.
+            tests :
+              - not_null
+          - name : paid_source
+            description : channel of campaign.
+            tests :
+              - not_null
+          - name : campaign_key
+            description : id of campaign.
+            tests :
+              - not_null
+          - name : campaign_name
+            description : campaign name.
+            tests :
+              - not_null
+          - name : ads_cost
+            description : ads cost.
+            tests :
+              - not_null
+          - name : impression
+            description : number of impression par date and campaign.
+          - name : click
+            description : number of click par date and campaign.
+            
       - name : facebook
         identifier : raw_gz_facebook
+        description: cost, impressions and click per campaign and per day for facebook campaign.
         tests:
           - unique:
               column_name: "(date_date ||'-'||campaign_key)"
+        columns: 
+          - name : date_date
+            description : date of the campaign.
+            tests :
+              - not_null
+          - name : paid_source
+            description : channel of campaign.
+            tests :
+              - not_null
+          - name : campaign_key
+            description : id of campaign.
+            tests :
+              - not_null
+          - name : campaign_name
+            description : campaign name.
+            tests :
+              - not_null
+          - name : ads_cost
+            description : ads cost.
+            tests :
+              - not_null
+          - name : impression
+            description : number of impression par date and campaign.
+          - name : click
+            description : number of click par date and campaign.
+            
       - name: product
         identifier: raw_gz_product
         description: purchase price per product / products_id is the primary key.
